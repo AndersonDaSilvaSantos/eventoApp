@@ -1,5 +1,7 @@
 package com.reunioesapp.controllers;
 
+import java.util.Optional;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,6 +63,14 @@ public class ReuniaoController {
 		
 		return mv;
 	}
+	
+	/*@RequestMapping("/editarReuniao")
+	public String editarReuniao(@PathVariable long codigo) {
+		Reuniao reuniao = rr.findByCodigo(codigo);
+		rr.update(reuniao);
+		return "reuniao/formReuniao";
+	}
+	*/
 	
 	@RequestMapping("/deletarReuniao")
 	public String deletarReuniao(long codigo){
