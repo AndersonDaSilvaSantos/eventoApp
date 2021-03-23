@@ -1,4 +1,4 @@
-package com.reunioesapp;
+package com.reunioesapp.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

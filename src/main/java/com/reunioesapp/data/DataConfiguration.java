@@ -1,4 +1,4 @@
-package com.reunioesapp;
+package com.reunioesapp.data;
 
 import javax.sql.DataSource;
 

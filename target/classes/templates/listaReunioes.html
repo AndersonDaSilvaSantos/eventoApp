@@ -3,7 +3,7 @@
 	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
 	<meta charset="UTF-8">
-	<title>ReunioesApp</title>
+	<title>ReuniõesApp</title>
 	 <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
       <!--Import materialize.css-->
@@ -32,20 +32,17 @@
 				<th>Nome</th>
 				<th>Local</th>
 				<th>Data</th>
-				<th>Horário</th>
+				<th>Horario</th>
 				<th>Deletar</th>
-				<th>Editar</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr th:each="reuniao : ${listaReunioes}">
 				<td><a th:href="${(#mvc.url('EC#detalhesReuniao').arg(0, reuniao.codigo)).build()}"><span th:text="${reuniao.nome}"></span></a></td>
-				
 				<td><span th:text="${reuniao.local}"></span></td>
 				<td><span th:text="${reuniao.data}"></span></td>
 				<td><span th:text="${reuniao.horario}"></span></td>
 				<td><a class="waves-effect waves-light btn-small" th:href="${(#mvc.url('EC#deletarReuniao').arg(0, reuniao.codigo)).build()}"><i class="material-icons left">delete</i></a></td>
-				<td><a class="waves-effect waves-light btn-small" th:href="${(#mvc.url('EC#editarReuniao').arg(0, reuniao.codigo)).build()}"><i class="material-icons left">update</i></a></td>
 			</tr>
 		</tbody>
 	
